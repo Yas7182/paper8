@@ -1,0 +1,23 @@
+from numpy import *
+from sympy import *
+from sympy.abc import x,y
+p=3*x**2-(8*y**2)
+q=2*y*(2-3*x)
+print("normal integration")
+i1=integrate(p.subs(y,0)+q.subs(y,0),(x,0,1))
+print(i1)
+i2=integrate(-2*y,(y,0,2))
+print(i2)
+i3=integrate(3*x**2-32,(x,1,0))
+print(i3)
+i4=integrate(4*y,(y,2,0))
+print(i4)
+i=i1+i2+i3+i4
+solve(i)
+print(i)
+gi=integrate(diff(q,x)-diff(p,y),(x,0,1),(y,0,2))
+print(gi)
+if(i==gi):
+    print("greens theorem verified")
+else:
+    print("not verified")
