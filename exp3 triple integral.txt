@@ -1,0 +1,36 @@
+from sympy import *
+x,y,z,t=symbols("x,y,z,t")
+f=x*z
+a1=integrate(f,(z,0,y-x),(y,x,1),(x,0,1))
+print(a1)
+
+18
+
+from sympy import *
+x,y,z,t=symbols("x,y,z,t")
+f=x*z
+a1=integrate(f,(z,0,y-x),(y,x,1),(x,0,1))
+print(a1)
+
+-3*exp(2) - 1 + 3*E + exp(3)
+
+
+from sympy import *
+x,y,z,t=symbols("x,y,z,t")
+f=x*z
+a1=integrate(f,(z,0,y-x),(y,x,1),(x,0,1))
+print(a1)
+
+
+1/120
+
+from sympy import *
+x,y,z,t=symbols("x,y,z,t")
+f=x*y
+a1=integrate(f,(z,0,y+x),(y,x**2,sqrt(x)),(x,0,1))
+print(a1)
+
+3/28
+
+
+https://jupyter.org/try-jupyter/lab?path=notebooks%2FUntitled3.ipynb

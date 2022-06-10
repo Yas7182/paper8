@@ -1,0 +1,31 @@
+from sympy import *
+x,y=symbols("x,y")
+ans=integrate((x+y),(x,0,1),(y,0,2))
+print(ans)
+
+3
+
+from sympy import *
+x,y=symbols("x,y")
+ans2=integrate((cos(x)*sin(x)),(x,0,pi/6),(y,0,pi/3))
+print(ans2)
+
+pi/24
+
+from sympy import *
+x,y=symbols("x,y")
+z=x*y**2
+ans6=integrate(z,(y,0,x),(x,1,2))
+print(ans6)
+
+31/15
+
+from sympy import *
+x,y=symbols("x,y")
+z=1
+ans7=integrate(z,(y,0,((9-(x**2))**(1/2))),(x,0,3))
+print(ans7)
+
+9.0*hyper((-0.5, 1/2), (3/2,), 1)
+
+https://jupyter.org/try-jupyter/lab?path=notebooks%2FUntitled1.ipynb

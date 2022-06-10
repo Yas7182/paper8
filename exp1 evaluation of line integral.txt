@@ -1,0 +1,51 @@
+from sympy import *
+from sympy.abc import x,y
+y=x**2
+dx=diff(x,x)
+dy=diff(y,x)
+integrand=x*dy-y*dx
+i=integrate(integrand,(x,0,1))
+print("the line integral is",i)
+
+the line integral is 1/3
+
+from sympy import *
+from sympy.abc import x,y
+y=x**2+1
+dx=diff(x,x)
+dy=diff(y,x)
+integrand=(((3*x)+y)*dx+((2*y)-x)*dy)
+i=integrate(integrand,(x,0,3))
+print("the line integral is",i)
+
+the line integral is 213/2
+
+from sympy import *
+from sympy.abc import x,y,z,t
+x=exp(t)
+y=exp(-t)
+z=t**2
+dx=diff(x,t)
+dy=diff(y,t)
+dz=diff(z,t)
+integrand=(x*y*dx)+((x**2)*z*dy)+((x*y*z)*dz)
+i=integrate(integrand,(t,0,1))
+print("the line integral is",i)
+
+the line integral is 3/2
+
+from sympy import *
+from sympy.abc import x,y,t
+a=4
+b=3
+x=a*cos(t)
+y=b*sin(t)
+dx=diff(x,t)
+dy=diff(y,t)
+integrand=((x+(2*y))*dx)+((4-(2*x))*dy)
+i=integrate(integrand,(t,0,2*pi))
+print("the line integral is",i)
+
+the line integral is -48*pi
+
+https://jupyter.org/try-jupyter/lab?path=notebooks%2FUntitled.ipynb
