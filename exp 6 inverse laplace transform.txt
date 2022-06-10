@@ -1,0 +1,25 @@
+from sympy import *
+from sympy.abc import t,s
+
+print(inverse_laplace_transform((1/(s+3)**3),s,t))
+
+output
+t**2*exp(-3*t)*Heaviside(t)/2
+
+print(inverse_laplace_transform((3*s**2+10*s-6)/(s**4),s,t))
+
+output
+t*(-t**2 + 5*t + 3)*Heaviside(t)
+
+print(inverse_laplace_transform((3/(s-3)**2),s,t))
+
+output
+3*t*exp(3*t)*Heaviside(t)
+
+print(inverse_laplace_transform((2*s-11)/(s**2+4*s+8),s,t))
+
+output
+-(15*sin(2*t) - 4*cos(2*t))*exp(-2*t)*Heaviside(t)/2
+
+
+https://jupyter.org/try-jupyter/lab?path=notebooks%2FUntitled8.ipynb
