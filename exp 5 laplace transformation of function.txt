@@ -1,0 +1,39 @@
+from sympy import *
+from sympy.abc import s,t
+t=symbols("t")
+f=1+t**3+3*t+3*t**2
+d=laplace_transform(f,t,s)
+print(d)
+
+((s**3 + 3*s**2 + 6*s + 6)/s**4, 0, True)
+
+
+f=2*sin(t)*sin(3*t)
+d=laplace_transform(f,t,s)
+print(d)
+
+(12*s/((s**2 + 4)*(s**2 + 16)), 0, True)
+
+f=exp(3*t)*sin(4*t)
+d=laplace_transform(f,t,s)
+print(d)
+
+(4/((s - 3)**2 + 16), 3, True)
+
+f=cos(3*t)**2
+d=laplace_transform(f,t,s)
+print(d)
+
+((s**2 + 18)/(s*(s**2 + 36)), 0, True)
+
+f=2*sin(t)*cos(3*t)
+d=laplace_transform(f,t,s)
+print(d)
+
+(2*(s**2 - 8)/((s**2 + 4)*(s**2 + 16)), 0, True)
+
+f=(t**3)+(3*t**2)-(6*t)+8
+d=laplace_transform(f,t,s)
+print(d)
+
+(2*(4*s**3 - 3*s**2 + 3*s + 3)/s**4, 0, True)
