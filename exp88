@@ -1,0 +1,27 @@
+from sympy import *
+x,t,c=symbols('x t c')
+f  = 3*sin(pi*x);c=1;l=1;sol=0
+for n in range(4):
+    Bn=(2/l)*integrate(f*sin(n*pi*x/l),(x,0,l))
+    sol=sol+(Bn*sin(n*pi*x/l)*exp(-n**2*pi**2*c**2*t/l))
+pprint(sol)
+
+
+from sympy import *
+x,t,c=symbols('x t c')
+f  = x**2-x;g=0;c=4;l=1;sol=0
+for n in range(4):
+    Bn=(2/l)*integrate(f*sin(n*pi*x/l),(x,0,l))
+    sol=sol+(Bn*sin(n*pi*x/l)*exp(-n**2*pi**2*c**2*t/l))
+pprint(sol)
+    
+    
+    
+    from sympy import *
+x,t,c=symbols('x t c')
+f  = x-x**2;g=0;c=2;l=1;sol=0
+for n in range(4):
+    Bn=(2/l)*integrate(f*sin(n*pi*x/l),(x,0,l))
+    sol=sol+(Bn*sin(n*pi*x/l)*exp(-n**2*pi**2*c**2*t/l))
+pprint(sol)
+    
