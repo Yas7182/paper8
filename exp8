@@ -1,0 +1,10 @@
+from sympy import *
+x,t,c=symbols("x,t,c")
+f=x-x**2;
+c=2;
+l=1;
+sol=0;
+for n in range(4):
+    Bn=(2/l)*integrate(f*sin(n*pi*x/l),(x,0,l))
+    sol=sol+(Bn*sin(n*pi*x/l)*exp(-n**2*pi**2*c**2*t/l**2))
+    print(sol)
