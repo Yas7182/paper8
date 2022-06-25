@@ -1,0 +1,21 @@
+from sympy import *
+from sympy.abc import x,y,z,a,b,c
+def gauss_theorem(P,Q,R,a,b,c):
+    I1=integrate(P.subs(x,a),(y,0,b),(z,0,c))
+    I2=integrate(Q.subs(y,b),(x,0,a),(z,0,c))
+    I3=integrate(R.subs(z,c),(x,0,a),(y,0,b))
+    I4=integrate(-P.subs(x,0),(y,0,b),(z,0,c))
+    I5=integrate(-Q.subs(y,0),(x,0,a),(z,0,c))
+    I6=integrate(-R.subs(z,0),(x,0,a),(y,0,b))
+    I_surface=simplify(I1+I2+I3+I4+I5+I6)
+    div_F=diff(P,x)+diff(Q,y)+diff(R,z)
+    
+    I_volume=simplify(integrate(div_F,(x,0,a),(y,0,b),(z,0,c)))
+    print("Value of closed surface integral is",I_surface)
+    print("Value of volume integral is",I_volume)
+    if I_surface==I_volume:
+        print("Hence,Gauss's Divergence theorem is satisfied")
+    else:
+        print("Hence,Gauss's Divergence theorem is not satisfied")
+gauss_theorem(x+z,y+z,x+y,a,b,c) 
+        
